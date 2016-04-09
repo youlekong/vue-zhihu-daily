@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <img class="pic" alt="" :src="img"
+    <img :class="picChange?'pic-change':'pic'" alt="" :src="img"
          src='https://pic3.zhimg.com/2d16f25c61e0323babf2f8ff5eb94d9f.jpg'>
     <label class="lb">{{text}}</label>
   </div>
@@ -12,7 +12,8 @@
     data () {
       return {
         img: '',
-        text: ''
+        text: '',
+        picChange: false
       }
     },
     ready () {
@@ -21,11 +22,10 @@
         var ob = data.data
         vm.img = ob.img
         vm.text = ob.text
-        vm.$el.querySelector('img').style.transition = 'all 3.5s'
-        vm.$el.querySelector('img').style.width = '110%'
-        vm.$el.querySelector('img').style.height = '110%'
-//        vm.$el.querySelector('img').style.transition = 'all 2s 2'
-//        vm.$el.querySelector('img').style.opacity = '0'
+        vm.picChange = true
+//        vm.$el.querySelector('img').style.transition = 'all 3.5s'
+//        vm.$el.querySelector('img').style.width = '110%'
+//        vm.$el.querySelector('img').style.height = '110%'
       })
 
       setTimeout(function () {
@@ -56,6 +56,11 @@
   .pic {
     width: 100%;
     height: 100%;
+  }
+  .pic-change {
+    width: 110%;
+    height: 110%;
+    transition: all 3.5s;
   }
   .lb {
     height: 20px;
