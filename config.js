@@ -11,6 +11,12 @@ module.exports = {
   },
   dev: {
     port: 8080,
-    proxyTable: {}
+    proxyTable: {
+      '/api': {
+        target: 'http://news-at.zhihu.com',
+        changeOrigin: true
+      }
+
+    }
   }
 }

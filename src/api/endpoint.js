@@ -1,0 +1,6 @@
+export const START_IMG = '/api/4/start-image/1080*1776'
+export const LATEST_NEWS = '/api/4/news/latest'
+export const NEWS = '/api/4/news/'
+export const STORY_EXTRA = '/api/4/story-extra/'
+export const THEMES = '/api/4/themes'
+export const THEME = '/api/4/theme/'
