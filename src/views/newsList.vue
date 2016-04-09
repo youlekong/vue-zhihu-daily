@@ -1,7 +1,9 @@
 <template>
   <div class="banner">
-    <span class="icon">三</span>
-    <span>首页</span>
+    <div>
+      <span class="icon">三</span>
+      <span>首页</span>
+    </div>
   </div>
   <div class="top" v-if="!loading">
     <img :src="list.top_stories[carousel].image" alt="top-stories">
@@ -59,12 +61,20 @@
 
 <style scoped>
   .banner {
+    height: 3em;
+    width: 100%;
+    font-size: 18px;
+    position: relative;
+    z-index: 9999;
+  }
+  .banner div{
     background-color: #008BED;
     color: #ffffff;
-    font-size: 18px;
     height: 3em;
+    width: 100%;
     line-height:3em;
     padding: 0px 20px;
+    position: fixed;
   }
   .banner span {
     padding: 0 5px;
