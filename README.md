@@ -32,25 +32,27 @@ URL: http://news-at.zhihu.com/api/4/news/latest
 ```json
 {
     "date": "20160409",
-    "stories": [ ... ],
-    "top_stories": [ ... ]
+    "stories": [],
+    "top_stories": []
 }
 ```
 
 ####  3.消息获取
 URL: http://news-at.zhihu.com/api/4/news/ + id
+
 使用在`最新消息`中获得的id，例如 http://news-at.zhihu.com/api/4/news/8133568
-响应实例：
+
+响应实例(省略部分)：
 ```
 // 省略部分
 {
     "body": "<div class=\"main-wrap content-wrap\">...</div>",
     "title": "咖啡因：缺觉的解药还是毒药？",
-    "image": "http://pic3.zhimg.com/abaab08f5d80ee7d2763aa993c128db6.jpg"
-    "share_url": "http://daily.zhihu.com/story/8133568":
+    "image": "http://pic3.zhimg.com/abaab08f5d80ee7d2763aa993c128db6.jpg",
+    "share_url": "http://daily.zhihu.com/story/8133568",
     "js": [],
     "ga_prefix": "041011",
-    "id": 8133568
+    "id": 8133568,
     "css": []
 }
 ```
