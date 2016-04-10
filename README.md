@@ -18,7 +18,8 @@ URL: http://news-at.zhihu.com/api/4/start-image/1080*1776
 
 响应实例：
 ```json
-{   "text": "© 许英龙",
+{
+    "text": "© 许英龙",
     "img": "https://pic3.zhimg.com/2d16f25c61e0323babf2f8ff5eb94d9f.jpg"
 }
 ```
@@ -30,9 +31,9 @@ URL: http://news-at.zhihu.com/api/4/news/latest
 响应实例：
 ```json
 {
-    date: "20160409",
-    stories: [ ... ],
-    top_stories: [ ... ]
+    "date": "20160409",
+    "stories": [ ... ],
+    "top_stories": [ ... ]
 }
 ```
 
@@ -40,17 +41,17 @@ URL: http://news-at.zhihu.com/api/4/news/latest
 URL: http://news-at.zhihu.com/api/4/news/ + id
 使用在`最新消息`中获得的id，例如 http://news-at.zhihu.com/api/4/news/8133568
 响应实例：
-```json
+```
 // 省略部分
 {
-    body: "<div class="main-wrap content-wrap">...</div>",
-    title: "咖啡因：缺觉的解药还是毒药？",
-    image: "http://pic3.zhimg.com/abaab08f5d80ee7d2763aa993c128db6.jpg"
-    share_url: "http://daily.zhihu.com/story/8133568":
-    js: [],
-    ga_prefix: "041011",
-    id: 8133568
-    css: []
+    "body": "<div class=\"main-wrap content-wrap\">...</div>",
+    "title": "咖啡因：缺觉的解药还是毒药？",
+    "image": "http://pic3.zhimg.com/abaab08f5d80ee7d2763aa993c128db6.jpg"
+    "share_url": "http://daily.zhihu.com/story/8133568":
+    "js": [],
+    "ga_prefix": "041011",
+    "id": 8133568
+    "css": []
 }
 ```
 
