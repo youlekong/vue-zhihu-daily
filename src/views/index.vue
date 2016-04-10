@@ -23,11 +23,7 @@
         vm.img = ob.img
         vm.text = ob.text
         vm.picChange = true
-//        vm.$el.querySelector('img').style.transition = 'all 3.5s'
-//        vm.$el.querySelector('img').style.width = '110%'
-//        vm.$el.querySelector('img').style.height = '110%'
       })
-
       setTimeout(function () {
         vm.$route.router.go({path: 'newsList'})
       }, 4000)
