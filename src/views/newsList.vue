@@ -5,9 +5,9 @@
       <span>首页</span>
     </div>
   </div>
-  <div class="top" v-if="!loading">
+  <div class="top" v-if="!loading" v-link="'/news/'+ list.top_stories[carousel].id">
     <img :src="list.top_stories[carousel].image" alt="top-stories">
-    <cite>{{list.top_stories[0].title}}</cite>
+    <cite>{{list.top_stories[carousel].title}}</cite>
     <div class="slick-dots">
       <div>
         <span v-for="(index,item) in list.top_stories">
@@ -18,7 +18,7 @@
   </div>
   <div class="content" v-if="!loading">
     <h4>今日新闻</h4>
-    <section v-for="item in list.stories">
+    <section v-for="item in list.stories" v-link="'/news/'+ item.id">
       <h3> {{ item.title }} </h3>
       <img :src="item.images[0]" alt="标题图片">
     </section>
@@ -27,15 +27,24 @@
 <script>
   import * as api from '../api/'
   export default {
-    created () {
-      let self = this
-      api.getLatestNews().then(function (result) {
-        self.list = result.data
-        self.loading = false
-        self.carousel += 1
-      }, function (e) {
-        console.warn(e)
-      })
+    route: {
+      data (transition) {
+        let self = this
+        this.carousel = -1
+        this.loading = true
+        api.getLatestNews().then(function (result) {
+          /* for dev */
+//          var top = result.data.top_stories
+//          for (var i = 0; i < top.length; i++) {
+//            top[i].image = '/static/a.jpg'
+//          }
+          self.list = result.data
+          self.loading = false
+          self.carousel += 1
+        }, function (e) {
+          console.warn(e)
+        })
+      }
     },
     data () {
       return {
