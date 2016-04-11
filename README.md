@@ -56,8 +56,30 @@ URL: http://news-at.zhihu.com/api/4/news/ + id
     "css": []
 }
 ```
+#### 4.主题日报列表
+URL: http://news-at.zhihu.com/api/4/themes
+
+用于主题的切换
+
+响应实例
+```JSON
+{
+    "limit": 1000,
+        "subscribed": [ ],
+        "others": [
+            {
+                "color": 15007,
+                "thumbnail": "http://pic3.zhimg.com/0e71e90fd6be47630399d63c58beebfc.jpg",
+                "description": "了解自己和别人，了解彼此的欲望和局限。",
+                "id": 13,
+                "name": "日常心理学"
+            },
+            ...
+        ]
+}
+```
 
 ## 主要贡献者
 [@Terry Towne](https://github.com/terrytowne)
-[@youlekong](https://github.com/youlekong)
 [@gzdaijie](https://github.com/gzdaijie)
+[@youlekong](https://github.com/youlekong)

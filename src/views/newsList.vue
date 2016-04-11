@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
     <div>
-      <span class="icon">三</span>
+      <span class="icon" v-link="{path: 'themes'}">三</span>
       <span>首页</span>
     </div>
   </div>
