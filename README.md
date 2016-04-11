@@ -73,8 +73,7 @@ URL: http://news-at.zhihu.com/api/4/themes
                 "description": "了解自己和别人，了解彼此的欲望和局限。",
                 "id": 13,
                 "name": "日常心理学"
-            },
-            ...
+            }
         ]
 }
 ```

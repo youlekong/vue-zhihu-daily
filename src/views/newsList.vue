@@ -1,7 +1,8 @@
 <template>
+  <themes :menu.sync='showMenu'></themes>
   <div class="banner">
     <div>
-      <span class="icon" v-link="{path: 'themes'}">三</span>
+      <span class="icon" @click="menu">三</span>
       <span>首页</span>
     </div>
   </div>
@@ -26,7 +27,11 @@
 </template>
 <script>
   import * as api from '../api/'
+  import themes from './themes'
   export default {
+    components: {
+      themes
+    },
     route: {
       data (transition) {
         let self = this
@@ -50,7 +55,8 @@
       return {
         list: null,
         loading: true,
-        carousel: -1
+        carousel: -1,
+        showMenu: false
       }
     },
     watch: {
@@ -64,6 +70,11 @@
           self.carousel = (self.carousel + 1) % self.list.top_stories.length
         }, 2000)
       }
+    },
+    methods: {
+      menu () {
+        this.showMenu = !this.showMenu
+      }
     }
   }
 </script>
@@ -75,6 +86,9 @@
     font-size: 18px;
     position: relative;
     z-index: 9999;
+  }
+  .banner .icon {
+    cursor: pointer;
   }
   .banner div{
     background-color: #008BED;

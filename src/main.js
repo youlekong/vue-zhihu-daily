@@ -25,6 +25,9 @@ router.map({
   'news/:id': {
     component: require('./views/news')
   },
+  'theme/:id': {
+    component: require('./views/theme')
+  },
   '*': {
     component: require('./views/notFound')
   }
