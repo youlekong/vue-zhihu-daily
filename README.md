@@ -93,7 +93,8 @@ URL: http://news-at.zhihu.com/api/4/theme/11
             "type":0,
             "id":7468668,
             "title":"不许无聊在读读日报里等你哟"
-        },
+        }
+    ],
     "description":"为你发现最有趣的新鲜事，建议在 WiFi 下查看",
     "background":"http://pic1.zhimg.com/a5128188ed788005ad50840a42079c41.jpg",
     "color":8307764,
