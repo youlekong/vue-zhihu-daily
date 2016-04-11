@@ -1,19 +1,39 @@
 <template>
   <div class="banner">
       <span class="icon">←</span>
-      <span class="title">{{title}}</span>
+      <span class="title">{{name}}</span>
+  </div>
+  <div class="">
+
   </div>
 </template>
 
 <script>
-//  import * as api from '../api/'
+  import * as api from '../api/'
   export default {
     route: {
-
+      data (transition) {
+        let themeId = transition.to.params.id
+        console.log(themeId)
+        let self = this
+        self.loading = true
+        api.getTheme(themeId).then(function (result) {
+          let data = result['data']
+          self.stories = data['stories']
+          self.desc = data['description']
+          self.name = data['name']
+          self.editors = data['editors']
+          self.image = data['image']
+        })
+      }
     },
     data () {
       return {
-        title: 'moren'
+        stories: null,
+        editors: null,
+        desc: '',
+        image: '',
+        name: ''
       }
     }
   }

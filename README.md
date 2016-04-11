@@ -77,6 +77,40 @@ URL: http://news-at.zhihu.com/api/4/themes
         ]
 }
 ```
+#### 5.主题日报详情
+URL: http://news-at.zhihu.com/api/4/theme/11
+
+用于查看各个主题详情
+
+响应实例
+```JSON
+{
+    "stories":[
+        {
+            "images":[
+                "http://pic1.zhimg.com/e3f596c7ed9e470733f0637adb6124e4.jpg"
+            ],
+            "type":0,
+            "id":7468668,
+            "title":"不许无聊在读读日报里等你哟"
+        },
+    "description":"为你发现最有趣的新鲜事，建议在 WiFi 下查看",
+    "background":"http://pic1.zhimg.com/a5128188ed788005ad50840a42079c41.jpg",
+    "color":8307764,
+    "name":"不许无聊",
+    "image":"http://pic3.zhimg.com/da1fcaf6a02d1223d130d5b106e828b9.jpg",
+    "editors":[
+         {
+              "url":"http://www.zhihu.com/people/wezeit",
+              "bio":"微在 Wezeit 主编",
+              "id":70,
+              "avatar":"http://pic4.zhimg.com/068311926_m.jpg",
+              "name":"益康糯米"
+         }
+    ],
+    "image_source":""
+}
+```
 
 ## 主要贡献者
 [@Terry Towne](https://github.com/terrytowne)
