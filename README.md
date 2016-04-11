@@ -94,12 +94,12 @@ URL: http://news-at.zhihu.com/api/4/theme/11
             "id":7468668,
             "title":"不许无聊在读读日报里等你哟"
         },
-    "description":"为你发现最有趣的新鲜事，建议在 WiFi 下查看",
-    "background":"http://pic1.zhimg.com/a5128188ed788005ad50840a42079c41.jpg",
-    "color":8307764,
-    "name":"不许无聊",
-    "image":"http://pic3.zhimg.com/da1fcaf6a02d1223d130d5b106e828b9.jpg",
-    "editors":[
+    "description": "为你发现最有趣的新鲜事，建议在 WiFi 下查看",
+    "background": "http://pic1.zhimg.com/a5128188ed788005ad50840a42079c41.jpg",
+    "color": 8307764,
+    "name": "不许无聊",
+    "image": "http://pic3.zhimg.com/da1fcaf6a02d1223d130d5b106e828b9.jpg",
+    "editors": [
          {
               "url":"http://www.zhihu.com/people/wezeit",
               "bio":"微在 Wezeit 主编",
@@ -108,7 +108,7 @@ URL: http://news-at.zhihu.com/api/4/theme/11
               "name":"益康糯米"
          }
     ],
-    "image_source":""
+    "image_source": ""
 }
 ```
 
